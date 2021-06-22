@@ -68,6 +68,7 @@ header {
     
     .attributes_item {
       padding: 0;
+      text-align: center;
     }
 /* -------------------------------------------------------------------
 ---------------------------------------------------------------------*/
@@ -105,7 +106,7 @@ header {
     h1 {
       margin-top: 0;
       color: #333333;
-      font-size: 32px;
+      font-size: 30px;
       font-weight: bold;
       text-align: center;
     }
@@ -488,7 +489,7 @@ header {
   </head>
   <body bgcolor="#ffffff">
 
-    <span class="preheader">This is a receipt for your recent Payment on {{ purchase_date }}</span>
+    <span class="preheader">This is a receipt for your recent purchase on {{ purchase_date }}</span>
     <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation">
       <tr>
         <td align="center">
@@ -516,24 +517,32 @@ header {
                     <td class="content-cell">
                       <div class="f-fallback">
                         <h1>Payment Received !</h1>
-                        <p>Thanks for using Servsmart Automation Services.This is a receipt for your recent Payment on {{ purchase_date }}.</p>
+                        <p>Thanks for using Servsmart Automation. This email is a receipt for your recent Payment on {{purchase_date}}. </p>
                        
                         <table class="attributes" width="100%" cellpadding="0" cellspacing="0" role="presentation">
                           <tr>
                             <td class="attributes_content">
                               <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
-                              
                                 <tr>
                                   <td class="attributes_item">
                                     <span class="f-fallback">
-              <strong>Opening Balance: </strong> &#8377; {{4500}}
+              <strong>Opening Balance:</strong> &#8377; {{1500}}
             </span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="attributes_item">
+                                 
                                   </td>
                                 </tr>
                               </table>
                             </td>
                           </tr>
-                        </table>                  
+                        </table>
+                        <table class="purchase" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+
+                          <tr>
+                            <td colspan="2">
                               <table class="purchase_content" width="100%" cellpadding="0" cellspacing="0">
                                 <tr>
                                   <th class="purchase_heading" align="left">
@@ -546,7 +555,7 @@ header {
                                 
                                 <tr>
                                   <td width="80%" class="purchase_item"><span class="f-fallback">Payment of Rupees</span></td>
-                                  <td class="align-right" width="20%" class="purchase_item"><span class="f-fallback">&#8377; {{1500}}</span></td>
+                                  <td class="align-right" width="20%" class="purchase_item"><span class="f-fallback">&#8377;{{1500}}</span></td>
                                 </tr>
                                 
                                 <tr>
@@ -554,7 +563,7 @@ header {
                                     <p class="f-fallback purchase_total purchase_total--label">Total Amount</p>
                                   </td>
                                   <td width="20%" class="purchase_footer" valign="middle">
-                                    <p class="f-fallback purchase_total"> &#8377;  {{1500}}</p>
+                                    <p class="align-right" width="40%" class="f-fallback purchase_total"> &#8377;  {{11.25}}</p>
                                   </td>
                                 </tr>
 
@@ -563,7 +572,7 @@ header {
                                     <p class="f-fallback purchase_total purchase_total--label">Closing Balance</p>
                                   </td>
                                   <td width="20%" class="purchase_footer" valign="middle">
-                                    <p class="f-fallback purchase_total">&#8377; {3000}</p>
+                                    <p class="align-right" width="40%" class="f-fallback purchase_total">&#8377; {{2972.75}}</p>
                                   </td>
                                 </tr>
                               </table>
